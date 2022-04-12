@@ -31,12 +31,17 @@ neighborhoodnames = []
 for i in filteredlist:
     if i["neighborhood"] not in neighborhoodnames:
         neighborhoodnames.append(i["neighborhood"])
+print(neighborhoodnames)
+nvalues = []
 
-
-
+for n in neighborhoodnames:
+    for i in filteredlist:
+        if filteredlist[i] == n:
+            #reduce function
+            print("hello World")
 
 
 #part 3
-f = open('911.json', "w")
-json.dump(cleanedList, f)
-f.close()
+#f = open('911.json', "w")
+#json.dump(cleanedList, f)
+#f.close()
